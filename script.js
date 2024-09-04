@@ -1,7 +1,3 @@
-var user = {
-    name: "Каманч",   
-    age: 8,            
-    isAdmin: false      
-};
-
-console.log(user);
+const userName = prompt("Пожалуйста, введите ваше имя:"); 
+ 
+alert(`Привет, ${userName}!`); 
