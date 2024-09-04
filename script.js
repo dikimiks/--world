@@ -1,14 +1,10 @@
 let a = 10;
-alert(a);
-a = 20;
-alert(a);
-
-let yearOfRelease = 2007;
-alert(yearOfRelease);
-
-let creatorName = "Брендан Эйх";
-alert(creatorName);
-
-
+let b = 2;
+alert(a + b);
+alert(a - b);
+alert(a * b);
+alert(a / b);
+let result = calculate(2, 5);
+alert(result);
 
 
