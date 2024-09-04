@@ -1,5 +1,2 @@
-let a = 9; 
-let b = 2; 
-let remainder = a % b; 
-alert( + a  + b  + remainder);
-
+let result = Math.pow(2, 5);
+alert(result);
