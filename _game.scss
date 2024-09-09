@@ -129,16 +129,13 @@
     }
 }
 
-.background{
-    background: rgb(225, 255, 143);
-}
+
 .game{
     background-color: rgb(32, 32, 39);
     height: 100%;
     background-image: url(img/Group\ 4.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 114px;
     background-position: calc(100% - 150px) calc(0% - 1000px);
 
     &__content{
