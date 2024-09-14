@@ -40,7 +40,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 649px;
 }
 .header__line {
   background-image: url(img/Group\ 1\ \(2\).svg);
