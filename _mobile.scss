@@ -9,20 +9,28 @@
     }
 
     .header {
-        height: 100vh;  
+        height: 700px;  
         background-image: url(img/mobile-stars.svg);
         background-repeat: no-repeat;
         background-size: 115%;
         background-position: calc(100% + 125px) calc(0% - 110px);
 
-        &__box {
-            
+        &__box {            
             padding-top: 147px;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             align-items: center;
+            height: 371px;
             
+        }
+
+        &__line{
+            background-image: url(img/Page\ 1.svg);
+            overflow: hidden;
+            height: 51px;
+            background-repeat: no-repeat;
+
         }
 
         &__title {
@@ -73,6 +81,8 @@
     .game {
         height: 100%;
         width: 343px;
+        padding-top: 48px;
+
 
         &__title {
             color: rgb(255, 255, 255);

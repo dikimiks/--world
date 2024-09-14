@@ -15,6 +15,12 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    height: 649px;
+}
+
+&__line{
+    background-image: url(img/Group\ 1\ \(2\).svg);
+    overflow: hidden;
 }
 
 &__title {
