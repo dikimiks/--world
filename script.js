@@ -101,3 +101,108 @@ const daysInMonth = 31;
 for (let day = firstFriday; day <= daysInMonth; day += 7) {
     console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
 }
+
+const getSmallerNumber = (num1, num2) => (num1 < num2 ? num1 : num2);
+
+console.log(getSmallerNumber(8, 4)); 
+
+function checkEvenOdd(number) {
+    if (number % 2 === 0) {
+        return 'Число четное';
+    } else {
+        return 'Число нечетное';
+    }
+}
+console.log(checkEvenOdd(4));
+
+function printSquare(number) {
+    const square = number * number; 
+    console.log(square); 
+}
+
+function getSquare(number) {
+    return number * number; 
+}
+
+printSquare(7); 
+
+const result = getSquare(6); 
+console.log(result);
+
+function greetUser() {
+    let age;
+
+    while (true) {
+        age = prompt("Сколько вам лет?");
+
+        age = Number(age);
+
+        if (isNaN(age) || age < 0) {
+            alert('Вы ввели неправильное значение. Повторите попытку!');
+        } else {
+            break;
+        }
+    }
+
+    if (age >= 0 && age <= 12) {
+        alert('Привет, друг!');
+    } else { 
+        alert('Добро пожаловать!');
+    }
+}
+greetUser();
+
+function checkAndCube() {
+    while (true) {
+        let input = prompt("Введите число:");
+
+        if (input === null) {
+            alert('Вы вышли из программы.');
+            break; 
+        }
+
+        let number = Number(input);
+        if (isNaN(number)) {
+            alert('Переданный параметр не является числом');
+        } else {
+            let cube = Math.pow(number, 3);
+            alert(`${number} в кубе равняется ${cube}`);
+            break; 
+        }
+    }
+}
+checkAndCube();
+
+const circle1 = {
+    radius: 5,
+    
+    getArea: function() {
+        return Math.PI * Math.pow(this.radius, 2);
+    },
+    
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+const circle2 = {
+    radius: 10,
+
+    getArea: function() {
+        return Math.PI * Math.pow(this.radius, 2);
+    },
+
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+console.log("Circle 1:");
+console.log("Radius:", circle1.radius);
+console.log("Area:", circle1.getArea());
+console.log("Perimeter:", circle1.getPerimeter());
+
+console.log("Circle 2:");
+console.log("Radius:", circle2.radius);
+console.log("Area:", circle2.getArea());
+console.log("Perimeter:", circle2.getPerimeter());
