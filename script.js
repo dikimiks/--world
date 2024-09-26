@@ -206,3 +206,172 @@ console.log("Circle 2:");
 console.log("Radius:", circle2.radius);
 console.log("Area:", circle2.getArea());
 console.log("Perimeter:", circle2.getPerimeter());
+
+
+//hw6
+
+//1
+
+const array = [1, 5, 4, 10, 0, 3];
+const reslt = array.find(num => num === 10);
+
+if (reslt !== undefined) {
+    console.log(reslt);
+}
+
+//2
+
+const arr = [1, 5, 4, 10, 0, 3];
+const targetValue = 4;
+let index = -1;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === targetValue) {
+        index = i;
+        break;
+    }
+}
+console.log(index);
+
+//3
+
+const numbs = [1, 3, 5, 10, 20];
+const output = numbs.join(' ');
+console.log(output);
+
+//4
+
+const totalRows = 3; 
+const totalCols = 3; 
+
+const array2 = []; 
+
+for (let rowIndex = 0; rowIndex < totalRows; rowIndex++) {
+    const newRow = []; 
+    for (let colIndex = 0; colIndex < totalCols; colIndex++) {
+        newRow.push(1); 
+    }
+    array2.push(newRow); 
+}
+
+
+console.log(array2);
+
+//5
+
+let numb = [1, 1, 1];
+numb.push(2, 2, 2);
+console.log(numb);
+
+//6
+
+let numArray = [9, 8, 7, 'a', 6, 5];
+
+numArray = numArray.filter(item => typeof item === 'number');
+numArray.sort((a, b) => a - b);
+
+console.log(numArray);
+
+//7
+
+let numberList = [9, 8, 7, 6, 5];
+let userGuess = prompt("Угадайте число из массива: [9, 8, 7, 6, 5]");
+
+if (numberList.includes(Number(userGuess))) {
+    alert("Угадал");
+} else {
+    alert("Не угадал");
+}
+
+
+
+//8
+
+
+let initialString = 'abcdef';
+let reversedArray = initialString.split('');
+reversedArray.reverse();
+let reversedString = reversedArray.join('');
+
+console.log(reversedString);
+
+//9
+
+let nestedArray = [[1, 2, 3], [4, 5, 6]];
+let flatArray = [...nestedArray[0], ...nestedArray[1]];
+
+console.log(flatArray);
+
+//10
+const randomNumbers = [1, 3, 5, 7, 2, 9, 4, 6, 8, 10];
+
+for (let i = 0; i < randomNumbers.length - 1; i++) {
+    console.log(randomNumbers[i] + randomNumbers[i + 1]);
+}
+
+//11
+function getSquares(integersArray) {
+    const squaresArray = integersArray.map(function(number) {
+        return number * number; 
+    });
+    
+    return squaresArray; 
+}
+
+const numbers = [1, 2, 3, 4, 5]; 
+const squares = getSquares(numbers); 
+
+console.log(squares); 
+
+//12
+
+function getStringLengths(stringsArray) {
+    const lengthsArray = stringsArray.map(function(currentString) {
+        return currentString.length; 
+    });
+
+    return lengthsArray; 
+}
+
+const cities = ["Москва", "Сочи", "Екатеринбург", "Пермь"]; 
+const lengths = getStringLengths(cities);
+
+console.log(lengths);
+
+//13
+
+function filterNegativeValues(arr) {
+    return arr.filter(function(num) {
+        return num < 0;
+    });
+}
+
+const integerArray = [10, -2, 5, -4, 0, -1, 3]; 
+const negativeValues = filterNegativeValues(integerArray); 
+
+console.log(negativeValues);
+
+//14
+
+const initialArray = [];
+for (let index = 0; index < 10; index++) {
+    initialArray.push(Math.floor(Math.random() * 11)); 
+}
+
+const filteredEvens = initialArray.filter(number => number % 2 === 0);
+
+console.log("Исходный массив:", initialArray);
+console.log("Четные значения:", filteredEvens);
+
+//15
+
+const numbersArray = [];
+for (let count = 0; count < 6; count++) {
+    numbersArray.push(Math.floor(Math.random() * 10) + 1); 
+}
+
+const sum = numbersArray.reduce((accumulator, current) => accumulator + current, 0);
+const average = sum / numbersArray.length;
+
+console.log("Массив чисел:", numbersArray);
+console.log("Среднее арифметическое:", average);
