@@ -375,3 +375,4 @@ const average = sum / numbersArray.length;
 
 console.log("Массив чисел:", numbersArray);
 console.log("Среднее арифметическое:", average);
+
