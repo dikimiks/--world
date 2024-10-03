@@ -1,3 +1,4 @@
+
 let password = 'верный пароль';
 let userInput = prompt('Введите пароль');
 if (userInput === password) {
@@ -376,3 +377,124 @@ const average = sum / numbersArray.length;
 console.log("Массив чисел:", numbersArray);
 console.log("Среднее арифметическое:", average);
 
+//hw7
+
+//1
+
+let str = 'js';
+let upperStr = str.toUpperCase();
+console.log(upperStr);
+
+//2
+
+function filterStringsByPrefix(arr, prefix) {
+    const lowerPrefix = prefix.toLowerCase();
+    
+    const result = arr.filter(str => str.toLowerCase().startsWith(lowerPrefix));
+    
+    return result;
+}
+
+//3
+let number = 32.58884;
+
+let roundedDown = Math.floor(number); 
+let roundedUp = Math.ceil(number);    
+let roundedNearest = Math.round(number); 
+
+//4
+
+let numbers = [52, 53, 49, 77, 21, 32];
+
+let minValue = Math.min(...numbers); 
+let maxValue = Math.max(...numbers); 
+
+console.log("Минимальное значение:", minValue); 
+console.log("Максимальное значение:", maxValue); 
+
+//5
+
+function generateRandomNumber() {
+    let randomNumber = Math.floor(Math.random() * 10) + 1; 
+    console.log(randomNumber); 
+}
+
+//6
+function generateRandomArray(n) {
+    if (!Number.isInteger(n) || n <= 0) {
+        return "Введите положительное целое число.";
+    }
+
+    let length = Math.floor(n / 2);
+    let randomNumbers = [];
+
+    for (let i = 0; i < length; i++) {
+        let randomNumber = Math.floor(Math.random() * n); 
+        randomNumbers.push(randomNumber); 
+    }
+
+    return randomNumbers; 
+}
+
+console.log(generateRandomArray(10)); 
+
+
+//7
+function getRandomNumberBetween(min, max) {
+    if (!Number.isInteger(min) || !Number.isInteger(max)) {
+        return "Оба значения должны быть целыми числами.";
+    }
+    
+    if (min > max) {
+        return "Минимальное значение должно быть меньше или равно максимальному значению.";
+    }
+    
+    let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    
+    return randomNumber; 
+}
+
+console.log(getRandomNumberBetween(2, 29));
+
+//8
+
+let currentDate = new Date();
+console.log(currentDate);
+
+//9
+
+let currentDate = new Date();
+console.log("Текущая дата:", currentDate);
+
+let currentDay = currentDate.getDate();
+currentDate.setDate(currentDay + 73);
+
+console.log("Дата через 73 дня:", currentDate);
+
+//10
+
+function formatDate(date) {
+    const months = [
+        "января", "февраля", "марта", "апреля", "мая", "июня", 
+        "июля", "августа", "сентября", "октября", "ноября", "декабря"
+    ];
+    
+    const weekdays = [
+        "воскресенье", "понедельник", "вторник", "среда", 
+        "четверг", "пятница", "суббота"
+    ];
+    
+    const day = date.getDate(); 
+    const month = months[date.getMonth()]; 
+    const year = date.getFullYear(); 
+    const weekday = weekdays[date.getDay()]; 
+
+    const hours = String(date.getHours()).padStart(2, '0'); 
+    const minutes = String(date.getMinutes()).padStart(2, '0'); 
+    const seconds = String(date.getSeconds()).padStart(2, '0'); 
+
+    return `Дата: ${day} ${month} ${year} — это ${weekday}. Время: ${hours}:${minutes}:${seconds}`;
+}
+
+const myDate = new Date(); 
+console.log(formatDate(myDate));
