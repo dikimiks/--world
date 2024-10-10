@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скрытие и показ текста</title>
+    <title>Скрытие, показ текста и изменение цвета</title>
     <style>
         #header {
             transition: opacity 0.5s;
@@ -15,15 +15,17 @@
     <h1 id="header">Это заголовок, который можно скрыть</h1>
     <button id="toggleButton">Скрыть</button>
 
+    <p id="paragraph">Это абзац, текст которого можно изменить.</p>
+    <button id="colorButton">Изменить цвет</button>
+
     <script>
-        // Получение ссылок на заголовок и кнопку
         const header = document.querySelector('#header');
         const toggleButton = document.querySelector('#toggleButton');
-        
-        // Установка флага для отслеживания состояния заголовка
+        const paragraph = document.querySelector('#paragraph');
+        const colorButton = document.querySelector('#colorButton');
+
         let isHidden = false;
 
-        // Обработчик события click для кнопки
         toggleButton.addEventListener('click', () => {
             if (isHidden) {
                 header.style.display = 'block';
@@ -32,7 +34,11 @@
                 header.style.display = 'none';
                 toggleButton.textContent = 'Показать';
             }
-            isHidden = !isHidden; // Переключение состояния
+            isHidden = !isHidden;
+        });
+
+        colorButton.addEventListener('click', () => {
+            paragraph.style.color = 'blue'; 
         });
     </script>
 
