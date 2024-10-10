@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скрытие текста, изменение цвета и текста</title>
+    <title>Скрытие текста, изменение цвета, текста и поиск по классу</title>
     <style>
         #header {
             transition: opacity 0.5s;
@@ -12,13 +12,18 @@
 </head>
 <body>
     <h1 id="header">Это заголовок, который можно скрыть</h1>
-    <button id="toggleButton">Скрыть</button>
+    <button id="toggleButton">Скрыть</button>  
     
     <p id="paragraph">Это абзац, текст которого можно изменить.</p>
     <button id="colorButton">Изменить цвет</button>
     
     <h2 id="changeTextHeader">Текущий текст заголовка</h2>
     <button id="changeTextButton">Изменить текст</button>
+    
+    <div class="description">Описание 1</div>
+    <div class="description">Описание 2</div>
+    <div class="description">Описание 3</div>
+    <button id="changeDescriptionButton">Изменить описания</button>
     
     <script>
         const header = document.querySelector('#header');
@@ -27,6 +32,7 @@
         const colorButton = document.querySelector('#colorButton');
         const changeTextHeader = document.querySelector('#changeTextHeader');
         const changeTextButton = document.querySelector('#changeTextButton');
+        const changeDescriptionButton = document.querySelector('#changeDescriptionButton');
 
         let isHidden = false;
 
@@ -46,7 +52,14 @@
         });
 
         changeTextButton.addEventListener('click', () => {
-            changeTextHeader.textContent = 'Привет, мир!';
+            changeTextHeader.textContent = 'Привет, мир!'; 
+        });
+
+        changeDescriptionButton.addEventListener('click', () => {
+            const descriptions = document.querySelectorAll('.description'); 
+            descriptions.forEach((element) => {
+                element.textContent = 'Измененный текст'; 
+            });
         });
     </script>
 </body>
