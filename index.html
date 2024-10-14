@@ -3,9 +3,192 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HW</title>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <p>hjk</p>
+    <header class="header">
+        <div class="header__box center">
+            <h1 class="header__title">Добро пожаловать на мой сайт мини-игр</h1>
+            <p class="header__text">Тебе предстоит пройти несколько увлекательных игр. <br> Если готов, нажимай <span class="header__text-bold">«Поехали!»</span> и <span class="header__text-bold">приступай</span>.</p>
+            <a href="#game-preview" class="header__button">Поехали!</a>
+        </div>
+        <div class="header__line"></div>
+    </header>
+    <main>
+        <div class="game-preview center " id="game-preview">
+            <div class="game-preview__info">
+                <h2 class="game-preview__title">Об играх</h2>
+                <p class="game-preview__text">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные — в них
+                    может поиграть каждый.
+                    <br>Все игры доступны для пользования.
+                </p>
+            </div>
+
+            <div class="cart">
+                <div class="cart__conteiner">
+                    <a href="#card1" class="card-link">                    
+                        <div class="cart__item">                        
+                            <img class="cart__img" src="img/Обложка карточки 1-1.png" alt="">
+                            <div class="cart__info info">
+                                <div class="info__number">
+                                    <p class="info__text">Игра №1</p>
+                                </div>
+                                <h3 class="info__title">Угадай число</h3>
+                            </div>                    
+                        </div>
+                    </a>
+
+                    <a href="#card4" class="card-link">
+                        <div class="cart__item-big">
+                            <img class="cart__img" src="img/Обложка карточки 1-4.png" alt="">
+                            <div class="cart__info info">
+                                <div class="info__number">
+                                    <p class="info__text">Игра №4</p>
+                                </div>
+                                <h3 class="info__title">Камень, ножницы, бумага</h3>
+                            </div>                    
+                        </div>
+                    </a>
+
+                </div>
+                
+                <div class="cart__conteiner">
+
+                    <a href="#card2" class="card-link">
+                        <div class="cart__item-big">
+                            <img class="cart__img" src="img/Обложка карточки 1-2.png" alt="">
+                            <div class="cart__info info">
+                                <div class="info__number">
+                                    <p class="info__text">Игра №2</p>
+                                </div>
+                                <h3 class="info__title">Простая Арифметика</h3>
+                            </div>                    
+                        </div>
+                    </a>
+
+                    <a href="#card5" class="card-link">
+                        <div class="cart__item">
+                            <img class="cart__img" src="img/Обложка карточки 1-5.png" alt="">
+                            <div class="cart__info info">
+                                <div class="info__number">
+                                    <p class="info__text">Игра №5</p>
+                                </div>
+                                <h3 class="info__title">Простая викторина</h3>
+                            </div>                    
+                        </div>
+                    </a>
+                    
+                </div>
+                
+                <div class="cart__conteiner">
+                    <a href="#card3" class="card-link">
+                        <div class="cart__item">
+                            <img class="cart__img" src="img/Обложка карточки 1-3.png" alt="">
+                            <div class="cart__info info">
+                                <div class="info__number">
+                                    <p class="info__text">Игра №3</p>
+                                </div>
+                                <h3 class="info__title">Переверни текст</h3>
+                            </div>                    
+                        </div>
+                    </a>
+
+                    <a href="#card6" class="card-link">
+                        <div class="cart__item-big">
+                            <img class="cart__img" src="img/Обложка карточки 1-6.png" alt="">
+                            <div class="cart__info info">
+                                <div class="info__number">
+                                    <p class="info__text">Игра №6</p>
+                                </div>
+                                <h3 class="info__title">Генератор случайных цветов</h3>
+                            </div>                    
+                        </div>  
+                    </a>
+                </div>
+            </div>           
+        </div>
+            <div class="game center">
+                <div class="game__content">
+                    <h2 class="game__title">Мини-игры</h2>
+                </div>
+                <div class="game__box">
+                    <div id="card1" class="game__cart">
+                        <div class="cart__content">
+                            <h3 class="cart__title">Угадай число</h3>
+                            <p class="cart__text">Попробуй угадать случайное <br> число от 1 до 100.</p>
+                            <button class="cart__button" id="startGameButton">
+                                <h3 class="button__text">Играть!</h3>
+                            </button>
+                        </div>
+                            <img class="cart__img" src= "img/Обложка карточки2-1.png"  alt="Картинка 1">
+                    </div>
+                    <div id="card2" class="game__cart-other">
+                        <div class="cart__content">
+                            <h3 class="cart__title">Простая <br> арифметика</h3>
+                            <p class="cart__text">Попробуй решить простые арифметические задачи.</p>
+                            <button class="cart__button" id="startSecondGameButton">
+                                <h3 class="button__text">Играть!</h3>
+                            </button>
+                        </div>
+                        <img class="cart__img" src="img/Обложка карточки 2-2.png" alt="Картинка 2">
+                    </div>
+                    <div id="card3" class="game__cart">
+                        <div class="cart__content">
+                            <h3 class="cart__title">Переверни текст</h3>
+                            <p class="cart__text">Попробуй ввести текст, который <br> будет перевернут.</p>
+                            <button class="cart__button" id="playButton">
+                                <h3 class="button__text">Играть!</h3>
+                            </button>
+                        </div>
+                            <img class="cart__img" src= "img/Обложка карточки 2-3.png"  alt="Картинка 3">
+                    </div>
+                    <div id="card5" class="game__cart-other">
+                        <div class="cart__content">
+                            <h3 class="cart__title">Викторина</h3>
+                            <p class="cart__text">Отвечай на вопросы викторины <br> с вариантами ответов.</p>
+                            <button class="cart__button" onclick="startQuiz()">
+                                <h3 class="button__text">Играть!</h3>
+                            </button>
+                        </div>
+                            <img class="cart__img" src= "img/Обложка карточки 2-4.png"  alt="Картинка 4">
+                    </div>
+                    <div id="card4" class="game__cart">
+                        <div class="cart__content">
+                            <h3 class="cart__title">Камень, <br> ножницы, <br> бумага</h3>
+                            <p class="cart__text">Сыграй в популярную игру против компьютера.</p>
+                            <button class="cart__button" onclick="playFiveGame()">
+                                <h3 class="button__text">Играть!</h3>
+                            </button>
+                        </div>
+                            <img class="cart__img" src= "img/Обложка карточки 2-5.png"  alt="Картинка 5">
+                    </div>
+                
+                    <div id="card6" class="game__cart-other">
+                        <div class="cart__content">
+                            <h3 class="cart__title">Генератор <br> случайных <br> цветов</h3>
+                            <p class="cart__text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
+                            <button class="cart__button" id="changeColorBtn">
+                                <h3 class="button__text">Играть!</h3>
+                            </button>
+                        </div>
+                            <img class="cart__img" src= "img/Обложка карточки 2-6.png"  alt="Картинка 6">
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="footer">
+        <h3 class="footer__title">Все права защищены.</h3>
+    </footer>
+    <script src="script.js"></script>
+    <script src="1game.js"></script>
+    <script src="2game.js"></script>
+    <script src="3game.js"></script>
+    <script src="4game.js"></script>
+    <script src="5game.js"></script>
+    <script src="6game.js"></script>
   </body>
 </html>

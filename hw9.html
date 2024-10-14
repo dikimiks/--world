@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удаление элемента</title>
+    <style>
+        #header {
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Это заголовок, который можно скрыть</h1>
+    <button id="toggleButton">Скрыть</button>
+    
+    <p id="paragraph">Это абзац, текст которого можно изменить.</p>
+    <button id="colorButton">Изменить цвет</button>
+    
+    <h2 id="changeTextHeader">Текущий текст заголовка</h2>
+    <button id="changeTextButton">Изменить текст</button>
+    
+    <div class="description">Описание 1</div>
+    <div class="description">Описание 2</div>
+    <p class="description">Абзац с описанием 1</p>
+    <p class="description">Абзац с описанием 2</p>
+    <p>Абзац без описания</p>
+    <button id="changeDescriptionButton">Изменить описания</button>
+    
+    <button id="changeParagraphsButton">Изменить текст в абзацах</button>
+    
+    <button id="addParagraphButton">Добавить элемент</button>
+    
+    <button id="removeDescriptionButton">Удалить элемент</button>
+    
+    <script>
+        const header = document.querySelector('#header');
+        const toggleButton = document.querySelector('#toggleButton');
+        const paragraph = document.querySelector('#paragraph');
+        const colorButton = document.querySelector('#colorButton');
+        const changeTextHeader = document.querySelector('#changeTextHeader');
+        const changeTextButton = document.querySelector('#changeTextButton');
+        const changeDescriptionButton = document.querySelector('#changeDescriptionButton');
+        const changeParagraphsButton = document.querySelector('#changeParagraphsButton');
+        const addParagraphButton = document.querySelector('#addParagraphButton');
+        const removeDescriptionButton = document.querySelector('#removeDescriptionButton');
+
+        let isHidden = false;
+
+        toggleButton.addEventListener('click', () => {
+            if (isHidden) {
+                header.style.display = 'block';
+                toggleButton.textContent = 'Скрыть';
+            } else {
+                header.style.display = 'none';
+                toggleButton.textContent = 'Показать';
+            }
+            isHidden = !isHidden; 
+        });
+
+        colorButton.addEventListener('click', () => {
+            paragraph.style.color = 'blue'; 
+        });
+
+        changeTextButton.addEventListener('click', () => {
+            changeTextHeader.textContent = 'Привет, мир!'; 
+        });
+
+        changeDescriptionButton.addEventListener('click', () => {
+            const descriptions = document.querySelectorAll('.description'); 
+            descriptions.forEach((element) => {
+                element.textContent = 'Измененный текст'; 
+            });
+        });
+
+        changeParagraphsButton.addEventListener('click', () => {
+            const descriptionParagraphs = document.querySelectorAll('p.description'); 
+            descriptionParagraphs.forEach((paragraph) => {
+                paragraph.textContent = 'Новый текст';
+            });
+        });
+
+        addParagraphButton.addEventListener('click', () => {
+            const newParagraph = document.createElement('p'); 
+            newParagraph.textContent = 'Новый абзац'; 
+            document.body.appendChild(newParagraph); 
+        });
+
+        removeDescriptionButton.addEventListener('click', () => {
+            const firstDescription = document.querySelector('.description'); 
+            if (firstDescription) {
+                firstDescription.remove(); 
+            }
+        });
+    </script>
+</body>
+</html>
