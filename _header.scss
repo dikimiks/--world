@@ -17,10 +17,7 @@
     flex-wrap: wrap;
 }
 
-&__line{
-    background-image: url(img/Group\ 1\ \(2\).svg);
-    overflow: hidden;
-}
+
 
 &__title {
     color: rgb(32, 32, 39);
@@ -30,7 +27,7 @@
     line-height: 78px;
     letter-spacing: 0px;
     text-align: left;
-    padding-bottom: 48px;
+    padding-bottom: 24px;
 }
 
 &__text {
@@ -67,6 +64,27 @@
     display: inline-block; 
     cursor: pointer;
     transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.header__line {
+    overflow: hidden; 
+    white-space: nowrap; 
+    height: 90px;
+}
+
+.header__line img {
+    display: inline-block; 
+    animation: scroll-left 20s linear infinite; 
+    height: 90px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); 
+    }
+    to {
+        transform: translateX(-100%); 
+    }
 }
 
 &__button:hover {

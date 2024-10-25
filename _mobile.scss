@@ -25,12 +25,17 @@
             
         }
 
-        &__line{
-            background-image: url(img/Page\ 1.svg);
+        &__line {
             overflow: hidden;
             height: 51px;
             background-repeat: no-repeat;
 
+        }
+
+        &__line img {
+            display: inline-block; 
+            animation: scroll-left 20s linear infinite; 
+            height: 51px;
         }
 
         &__title {
@@ -129,6 +134,9 @@
         &__content {
             flex: 1;
             padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
         }
     
         &__title {
@@ -155,12 +163,50 @@
             object-fit: cover;
         }
     
-        &__button {
-            box-sizing: border-box;
-            border: 1px solid rgb(32, 32, 39);
-            border-radius: 60px;
-            background: rgb(32, 32, 39);
-        }
+    }
+
+    .cart__button {
+        border-radius: 60px;
+        box-sizing: border-box;
+        border: 1px solid rgb(32, 32, 39);
+        background: rgb(32, 32, 39);
+        width: 285px;
+        height: 55px;
+        transition: background 0.3s, color 0.3s, transform 0.3s;
+        cursor: pointer; 
     }
     
+    .button__text {
+        color: rgb(255, 255, 255);
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+    
+    .cart__button:hover {
+        background: rgb(255, 255, 255); 
+    }
+    
+    .cart__button:hover .button__text {
+        color: rgb(0, 0, 0);
+    }
+    
+    .card-link{
+        text-decoration: none; 
+    }
+
+    .footer__title {
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }

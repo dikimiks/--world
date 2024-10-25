@@ -26,12 +26,17 @@
             
         }
 
-        &__line{
-            background-image: url(img/Page\ 1.svg);
-            overflow: hidden;
-            height: 51px;
-            background-repeat: no-repeat;
+        &__line {
+                display: inline-block; 
+                height: 51px;
+            }
 
+        }
+
+        &__line img {
+            display: inline-block; 
+            animation: scroll-left 20s linear infinite; 
+            height: 51px;
         }
 
         &__title {
